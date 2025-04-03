@@ -3,7 +3,6 @@ import { resolve } from "path";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/story-app/' : '/',
   plugins: [
     VitePWA({
       strategies: "injectManifest", // Use your custom SW file
