@@ -3,7 +3,9 @@ import { resolve } from "path";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/your-repo-name/' : '/',
   plugins: [
+    
     VitePWA({
       strategies: "injectManifest", // Use your custom SW file
       srcDir: "scripts", // Directory where your SW is located
